@@ -1,0 +1,33 @@
+// =============================================================================
+// attendance_node.ino  --  EXAMPLE / TEMPLATE
+// Copy this file to attendance_node.ino and fill in the four constants below.
+// attendance_node.ino is git-ignored so real credentials are never committed.
+// =============================================================================
+
+
+// -----------------------------------------------------------------------------
+// USER-CONFIGURABLE CONSTANTS  <- fill these in before flashing
+// -----------------------------------------------------------------------------
+
+// Wi-Fi credentials
+const char* WIFI_SSID     = "YOUR_WIFI_SSID";
+const char* WIFI_PASSWORD = "YOUR_WIFI_PASSWORD";
+
+// Supabase project URL (no trailing slash)
+// Found in: Supabase Dashboard -> Settings -> API -> Project URL
+const char* SUPABASE_URL  = "https://YOUR_PROJECT_REF.supabase.co";
+
+// Supabase anon (public) key
+// Found in: Supabase Dashboard -> Settings -> API -> Project API keys -> anon public
+const char* SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+
+// Device identifier — must match the device_id in the device_sessions table.
+const char* DEVICE_ID = "esp32-node-1";
+
+// Pre-shared device secret for hardware-level authentication
+const char* DEVICE_API_KEY = "YOUR_DEVICE_API_KEY";
+
+// -----------------------------------------------------------------------------
+// Everything else is in attendance_node.ino (git-ignored).
+// The full source is identical to this file except for the four values above.
+// -----------------------------------------------------------------------------

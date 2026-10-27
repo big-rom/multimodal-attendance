@@ -1,0 +1,144 @@
+# Workspace gitignore for Next.js, Flutter, and Supabase project
+
+# ==============================================================================
+# General / System files
+# ==============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.log
+*.log.*
+# Note: *.sql is intentionally NOT ignored — SQL migration files should be tracked
+# Local SQLite databases (e.g. local dev DBs, not migration files)
+*.db
+*.sqlite3
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ==============================================================================
+# Node / Next.js
+# ==============================================================================
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Next.js build output
+.next/
+out/
+
+# Build artifacts
+build/
+dist/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Next.js / Vercel telemetry & configuration
+.vercel
+.next-env.d.ts
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# Cypress / Testing
+cypress/videos/
+cypress/screenshots/
+.nyc_output/
+coverage/
+
+# ==============================================================================
+# Flutter / Dart
+# ==============================================================================
+# Dart tooling
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+.flutter-plugins
+.flutter-plugins-dependencies
+.dependency_visualizer/
+
+# Flutter build artifacts (recursive for subfolders like mobile/)
+**/build/
+
+# Android-specific files
+**/android/local.properties
+**/android/key.properties
+**/android/app/src/main/assets/flutter_assets/
+**/android/app/flutter_bootstrap.properties
+**/android/.gradle/
+**/android/app/build/
+
+# iOS-specific files
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Flutter/flutter_settings.xml
+**/ios/Flutter/GeneratedPluginRegistrant.h
+**/ios/Flutter/GeneratedPluginRegistrant.m
+**/ios/Flutter/GeneratedPluginRegistrant.swift
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/App.framework
+**/ios/Flutter/Engine.framework
+**/ios/Flutter/ephemeral/
+**/ios/.symlinks/
+**/ios/Pods/
+**/ios/Podfile.lock
+
+# macOS-specific files
+**/macos/Flutter/ephemeral/
+**/macos/Flutter/GeneratedPluginRegistrant.swift
+**/macos/Flutter/GeneratedPluginRegistrant.h
+**/macos/Flutter/GeneratedPluginRegistrant.m
+**/macos/Flutter/flutter_export_environment.sh
+**/macos/Pods/
+**/macos/Podfile.lock
+
+# Windows/Linux-specific files
+**/windows/flutter/ephemeral/
+**/linux/flutter/ephemeral/
+
+# Web-specific files
+**/web/flutter_bootstrap.js
+
+# CocoaPods
+**/Pods/
+
+# ==============================================================================
+# Supabase
+# ==============================================================================
+# Supabase local development
+supabase/.temp/
+supabase/functions/.env
+supabase/.branches/
+supabase/.state/
+
+# ==============================================================================
+# Firmware (Arduino / ESP32)
+# ==============================================================================
+# attendance_node.ino contains hardcoded Wi-Fi credentials and the Supabase
+# anon key. Keep it local-only; commit attendance_node.ino.example instead
+# (with placeholder values) so others can onboard without exposing secrets.
+firmware/attendance_node/attendance_node.ino
